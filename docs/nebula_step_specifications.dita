@@ -1,4 +1,4 @@
-<!DOCTYPE concept PUBLIC "-//PUPPET//DTD DITA Puppet Concept//EN" "concept.dtd">
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="nebula_step_specifications" class="- topic/topic concept/concept ">
  <title class="- topic/title ">Step specifications</title>
  <shortdesc class="- topic/shortdesc ">The specification (<codeph translate="no" class="+ topic/ph pr-d/codeph ">spec</codeph>) section of a workflow defines

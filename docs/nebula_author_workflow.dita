@@ -1,4 +1,4 @@
-<!DOCTYPE task PUBLIC "-//PUPPET//DTD DITA Puppet Task//EN" "task.dtd">
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task id="neb_author_workflow" class="- topic/topic task/task ">
     <title class="- topic/title ">Create a workflow</title>
     <shortdesc class="- topic/shortdesc ">Use a <ph conkeyref="ProductNames/nebula_long" class="- topic/ph "/> workflow to define the steps in your

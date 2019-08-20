@@ -1,4 +1,4 @@
-<!DOCTYPE task PUBLIC "-//PUPPET//DTD DITA Puppet Task//EN" "task.dtd">
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task id="install_nebula_cli" class="- topic/topic task/task ">
     <title class="- topic/title ">Download and install the Nebula CLI</title>
     <shortdesc class="- topic/shortdesc ">Use the Nebula command line interface (CLI) to manage your workflows and secrets. </shortdesc>

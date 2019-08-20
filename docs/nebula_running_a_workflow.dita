@@ -1,4 +1,4 @@
-<!DOCTYPE concept PUBLIC "-//PUPPET//DTD DITA Puppet Concept//EN" "concept.dtd">
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="nebuila_running_a_workflow" class="- topic/topic concept/concept ">
  <title class="- topic/title ">Running a workflow</title>
  <shortdesc class="- topic/shortdesc ">Run a workflow from <ph conkeyref="ProductNames/nebula" class="- topic/ph ">'s</ph>'s web interface, or use

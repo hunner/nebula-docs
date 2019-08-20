@@ -1,4 +1,4 @@
-<!DOCTYPE concept PUBLIC "-//PUPPET//DTD DITA Puppet Concept//EN" "concept.dtd">
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="nebula_using_workflows" class="- topic/topic concept/concept ">
  <title class="- topic/title ">Using workflows</title>
  <shortdesc class="- topic/shortdesc "><ph conkeyref="ProductNames/nebula_long" class="- topic/ph "/> uses YAML workflows to define the steps in an

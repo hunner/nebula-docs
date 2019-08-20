@@ -1,4 +1,4 @@
-<!DOCTYPE concept PUBLIC "-//PUPPET//DTD DITA Puppet Concept//EN" "concept.dtd">
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="nebula_deploying_to_google_kubernetes_engine_using_helm.dita" class="- topic/topic concept/concept ">
  <title class="- topic/title ">Deploying to Google Kubernetes Engine using Helm</title>
  <shortdesc class="- topic/shortdesc ">Use the following step specification for a step that deploys an application to Google

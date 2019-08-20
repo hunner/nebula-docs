@@ -1,4 +1,4 @@
-<!DOCTYPE task PUBLIC "-//PUPPET//DTD DITA Puppet Task//EN" "task.dtd">
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task id="nebula_integrate" class="- topic/topic task/task ">
     <title class="- topic/title ">Integrate a repository with <ph conkeyref="ProductNames/nebula_long" class="- topic/ph "/></title>
     <shortdesc class="- topic/shortdesc ">You must integrate a repository with <ph conkeyref="ProductNames/nebula" class="- topic/ph "/> before you
