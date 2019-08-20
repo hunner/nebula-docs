@@ -1,0 +1,25 @@
+<!DOCTYPE task PUBLIC "-//PUPPET//DTD DITA Puppet Task//EN" "task.dtd">
+<task id="install_nebula_cli" class="- topic/topic task/task ">
+    <title class="- topic/title ">Download and install the Nebula CLI</title>
+    <shortdesc class="- topic/shortdesc ">Use the Nebula command line interface (CLI) to manage your workflows and secrets. </shortdesc>
+    <prolog class="- topic/prolog ">
+        <author type="creator" translate="no" class="- topic/author ">Heston Hoffman
+            &lt;heston.hoffman@puppet.com&gt;</author>
+    </prolog>
+
+    <taskbody class="- topic/body task/taskbody ">
+        <context class="- topic/section task/context ">
+            <p dir="ltr" class="- topic/p ">To set up the Nebula CLI:</p>
+            <ol class="- topic/ol ">
+                <li dir="ltr" class="- topic/li ">Download <codeph class="+ topic/ph pr-d/codeph ">nebula-cli-v1.2.0-darwin-amd64</codeph> from Nebula's
+                        <xref href="https://github.com/puppetlabs/nebula-cli/releases/download/v1.2.0/nebula-cli-v1.2.0-darwin-amd64" format="html" scope="external" class="- topic/xref "><u class="+ topic/ph hi-d/u ">releases page</u></xref>. </li>
+                <li dir="ltr" class="- topic/li ">Rename the file
+                    <codeph class="+ topic/ph pr-d/codeph ">nebula-cli</codeph>:<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">mv nebula-cli-v1.2.0-darwin-amd64 nebula-cli </codeblock></li>
+                <li dir="ltr" class="- topic/li ">Make the file executable:
+                    <codeblock translate="no" class="+ topic/pre pr-d/codeblock ">chmod +x nebula-cli</codeblock></li>
+                <li class="- topic/li ">Log in to Nebula with your username and
+                    password:<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">./nebula-cli login</codeblock></li>
+            </ol>
+        </context>
+    </taskbody>
+</task>

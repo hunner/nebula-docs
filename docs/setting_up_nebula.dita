@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//PUPPET//DTD DITA Puppet Concept//EN" "concept.dtd">
+<concept id="setting_up_nebula">
+ <title>Setting up <ph conkeyref="ProductNames/nebula_long"/></title>
+ <shortdesc>To set up <ph conkeyref="ProductNames/nebula"/>, integrate a repository using <ph conkeyref="ProductNames/nebula">'s</ph>'s web interface, and install the command-line interface
+  (CLI). </shortdesc>
+ <prolog>
+  <author type="creator" translate="no">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
+ </prolog>
+
+ <conbody/>
+</concept>

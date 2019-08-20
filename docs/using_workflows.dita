@@ -1,0 +1,14 @@
+<!DOCTYPE concept PUBLIC "-//PUPPET//DTD DITA Puppet Concept//EN" "concept.dtd">
+<concept id="nebula_using_workflows" class="- topic/topic concept/concept ">
+ <title class="- topic/title ">Using workflows</title>
+ <shortdesc class="- topic/shortdesc "><ph conkeyref="ProductNames/nebula_long" class="- topic/ph "/> uses YAML workflows to define the steps in an
+  application deployment.</shortdesc>
+ <prolog class="- topic/prolog ">
+  <author type="creator" translate="no" class="- topic/author ">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
+ </prolog>
+
+ <conbody class="- topic/body  concept/conbody ">
+  <p class="- topic/p ">Each step in a <ph conkeyref="ProductNames/nebula" class="- topic/ph "/> workflow runs in a separate container. <ph conkeyref="ProductNames/nebula" class="- topic/ph "/> executes the steps simultaneously unless you explicitly define
+   a sequential order for the steps to run in.</p>
+ </conbody>
+</concept>

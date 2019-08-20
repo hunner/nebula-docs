@@ -1,0 +1,18 @@
+<!DOCTYPE task PUBLIC "-//PUPPET//DTD DITA Puppet Task//EN" "task.dtd">
+<task id="neb_author_workflow" class="- topic/topic task/task ">
+    <title class="- topic/title ">Create a workflow</title>
+    <shortdesc class="- topic/shortdesc ">Use a <ph conkeyref="ProductNames/nebula_long" class="- topic/ph "/> workflow to define the steps in your
+        deployment scenario. </shortdesc>
+    <prolog class="- topic/prolog ">
+        <author type="creator" translate="no" class="- topic/author ">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
+    </prolog>
+    
+    <taskbody class="- topic/body task/taskbody ">
+        <context class="- topic/section task/context ">Start your workflow with a </context>
+        <steps class="- topic/ol task/steps ">
+            <step class="- topic/li task/step ">
+                <cmd class="- topic/ph task/cmd "/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//PUPPET//DTD DITA Puppet Concept//EN" "concept.dtd">
+<concept id="nebula_understanding_workflows">
+ <title>Understanding workflows</title>
+ <shortdesc><ph conkeyref="ProductNames/nebula_long"/> uses YAML workflows to define the steps in an
+  application deployment.</shortdesc>
+ <prolog>
+  <author type="creator" translate="no">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
+ </prolog>
+
+ <conbody>
+  <p>Each step in a <ph conkeyref="ProductNames/nebula"/> workflow performs a distinct action and
+   runs in its own container. You can use steps to provision resources, deploy applications, or
+   execute tasks. </p>
+  <p>When you run a workflow, <ph conkeyref="ProductNames/nebula"/> executes each step using a
+   Tekton pipeline. <ph conkeyref="ProductNames/nebula"/> executes all steps simultaneously unless
+   you explicitly define a sequential order for the steps to run in. For more information on
+   explicit step ordering, see <xref
+    href="http://docs-internal.puppet.com/docs/nebula/beta/nebula_create_workflow.html"
+    format="html" scope="external"><u>Writing a workflow</u></xref>. </p>
+ </conbody>
+</concept>

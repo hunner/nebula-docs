@@ -1,0 +1,157 @@
+<!DOCTYPE concept PUBLIC "-//PUPPET//DTD DITA Puppet Concept//EN" "concept.dtd">
+<concept id="nebula_deploying_to_google_kubernetes_engine_using_helm.dita" class="- topic/topic concept/concept ">
+ <title class="- topic/title ">Deploying to Google Kubernetes Engine using Helm</title>
+ <shortdesc class="- topic/shortdesc ">Use the following step specification for a step that deploys an application to Google
+  Kubernetes Engine using a Helm chart. </shortdesc>
+ <prolog class="- topic/prolog ">
+  <author type="creator" translate="no" class="- topic/author ">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
+ </prolog>
+
+ <conbody class="- topic/body  concept/conbody ">
+  <p class="- topic/p ">The <codeph translate="no" class="+ topic/ph pr-d/codeph ">spec</codeph> for a Helm deployment consists of six keys:<ul class="- topic/ul ">
+    <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">credentials</codeph>: If your Helm chart is secured, pass in your
+      <codeph translate="no" class="+ topic/ph pr-d/codeph ">ca</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">key</codeph>, and <codeph translate="no" class="+ topic/ph pr-d/codeph ">cert</codeph> as secrets. For
+     example:<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">spec:
+  credentials:
+    ca:
+      $type: Secret
+      name: ca
+    key:
+      $type: Secret
+      name: key
+    cert:
+      $type: Secret
+      name: cert</codeblock></li>
+    <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">values</codeph>: Use the <codeph translate="no" class="+ topic/ph pr-d/codeph ">values</codeph> key
+     to override specific values in the chart. For example, this spec overrides some of the chart's
+     API
+     values:<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">spec:
+...
+
+  values:
+    api:
+      image:
+        tag: 
+          $type: Secret
+          name: api.image.tag
+      db:
+        secretRef:
+          name: app-edgedb-credentials
+          key: url
+      githubClient:
+        secretRef:
+          name: app-github-client-credentials
+          clientIdKey: client-id
+          clientSecretKey: client-secret
+      bitbucketClient:
+        secretRef:
+          name: app-bitbucket-client-credentials
+          clientIdKey: client-id
+          clientSecretKey: client-secret
+      vault:
+        agent:
+          serviceAccount:
+            create: false
+            name: nebula-api-vault
+        address: "http://vault-vault.app.svc:8200"</codeblock></li>
+    <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">chart</codeph>: The path to the Helm chart in the
+     repo.<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">chart: helm/nebula</codeblock></li>
+    <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">namespace</codeph>: The namespace where you're deploying the Helm
+     chart.<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">namespace: default</codeblock></li>
+    <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">git</codeph>: The path to the chart's repository, and the credentials
+     needed to access
+     it.<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">spec:
+...
+
+  git:
+    ssh_key:
+      $type: Secret
+      name: ssh_key
+    known_hosts:
+      $type: Secret
+      name: known_hosts
+    name: nebula
+    repository: git@github.com:puppetlabs/nebula-deploy.git</codeblock></li>
+    <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">cluster</codeph>: The cluster where you're deploying the Helm
+     chart.<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">spec:
+  cluster:
+    name: nebula-cluster
+    url:
+      $type: Secret
+      name: url
+    cadata:
+      $type: Secret
+      name: cadata
+    token:
+      $type: Secret
+      name: token</codeblock></li>
+   </ul></p>
+  <p class="- topic/p ">Here is an example of a workflow that deploys to a GKE cluster using a Helm
+   Chart.<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">version: v1
+description: Nebula Workflow
+
+steps:
+- name: nebula-deploy-app
+  image: gcr.io/nebula-tasks/nebula-helm-deployer:latest
+  spec:
+    credentials:
+      ca:
+        $type: Secret
+        name: ca
+      key:
+        $type: Secret
+        name: key
+      cert:
+        $type: Secret
+        name: cert
+    values:
+      api:
+        image:
+          tag: 
+            $type: Secret
+            name: api.image.tag
+        db:
+          secretRef:
+            name: app-edgedb-nebula-ddl-credentials
+            key: url
+        githubClient:
+          secretRef:
+            name: app-github-client-credentials
+            clientIdKey: client-id
+            clientSecretKey: client-secret
+        bitbucketClient:
+          secretRef:
+            name: app-bitbucket-client-credentials
+            clientIdKey: client-id
+            clientSecretKey: client-secret
+        vault:
+          agent:
+            serviceAccount:
+              create: false
+              name: nebula-api-vault
+          address: "http://vault-vault.nebula-system.svc:8200"
+    chart: helm/nebula
+    namespace: default
+    git:
+      ssh_key:
+        $type: Secret
+        name: ssh_key
+      known_hosts:
+        $type: Secret
+        name: known_hosts
+      name: nebula
+      repository: git@github.com:puppetlabs/nebula-deploy.git      
+    cluster:
+      name: nebula-cluster
+      url:
+        $type: Secret
+        name: url
+      cadata:
+        $type: Secret
+        name: cadata
+      token:
+        $type: Secret
+        name: token
+</codeblock></p>
+ </conbody>
+</concept>

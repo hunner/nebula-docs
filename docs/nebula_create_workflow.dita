@@ -1,0 +1,83 @@
+<!DOCTYPE concept PUBLIC "-//PUPPET//DTD DITA Puppet Concept//EN" "concept.dtd">
+<concept id="nebula_create_workflow" class="- topic/topic concept/concept ">
+ <title class="- topic/title ">Writing a workflow</title>
+ <shortdesc class="- topic/shortdesc ">Use a <ph conkeyref="ProductNames/nebula_long" class="- topic/ph "/> workflow to define the steps in your
+    deployment. </shortdesc>
+ <prolog class="- topic/prolog ">
+  <author type="creator" translate="no" class="- topic/author ">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
+ </prolog>
+
+ <conbody class="- topic/body  concept/conbody ">
+  <p class="- topic/p "><ph conkeyref="ProductNames/nebula" class="- topic/ph "/> workflows use three top-level keys: <codeph translate="no" class="+ topic/ph pr-d/codeph ">version</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">description</codeph>, and <codeph translate="no" class="+ topic/ph pr-d/codeph ">steps</codeph>. </p>
+    <p class="- topic/p ">Start your workflow with the <codeph translate="no" class="+ topic/ph pr-d/codeph ">version</codeph> and <codeph translate="no" class="+ topic/ph pr-d/codeph ">description</codeph> keys:<ul class="- topic/ul ">
+        <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">version</codeph>: A string. Your workflow version.</li>
+        <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">description</codeph>: A string. A short description of your
+          workflow.</li>
+      </ul></p>
+    <p class="- topic/p ">For example:</p>
+    <p class="- topic/p ">
+      <codeblock translate="no" class="+ topic/pre pr-d/codeblock ">version: v1
+description: This workflow prints out a hello message to the logs. It also runs some simple terminal commands and prints their results to the logs.</codeblock>
+    </p>
+    <p class="- topic/p ">The <codeph translate="no" class="+ topic/ph pr-d/codeph ">steps</codeph> key makes up the body of your workflow. Each step
+      consists of a <codeph translate="no" class="+ topic/ph pr-d/codeph ">name</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">image</codeph>, and
+        <codeph translate="no" class="+ topic/ph pr-d/codeph ">spec</codeph> key, and an optional <codeph translate="no" class="+ topic/ph pr-d/codeph ">dependsOn</codeph> key:</p>
+    <ul class="- topic/ul ">
+      <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">name</codeph>: A string. The name of the
+        step.<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">name: echo</codeblock></li>
+      <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">image</codeph>: A string. The container image and tag you're using
+        for the step.<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">image: alpine:latest</codeblock></li>
+      <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">spec</codeph>: Use the specification section to define the task
+        that the step is performing. The contents of <codeph translate="no" class="+ topic/ph pr-d/codeph ">spec</codeph> depends on
+        the task's context. For example, a step that provisions a Kubernetes cluster must include a
+          <codeph translate="no" class="+ topic/ph pr-d/codeph ">credentials</codeph> hash with <codeph translate="no" class="+ topic/ph pr-d/codeph ">ca</codeph>,
+          <codeph translate="no" class="+ topic/ph pr-d/codeph ">key</codeph>, and <codeph translate="no" class="+ topic/ph pr-d/codeph ">cert</codeph> keys. For
+        more information, see <xref href="nebula_step_specifications.dita" class="- topic/xref ">step
+          specifications</xref>.</li>
+      <li class="- topic/li "><codeph translate="no" class="+ topic/ph pr-d/codeph ">dependsOn</codeph>:  (Optional) A list of strings. Use if the step
+        depends on another step in the workflow. This key is useful if you need to set an explicit
+        sequential order for your steps. If you leave out <codeph translate="no" class="+ topic/ph pr-d/codeph ">dependsOn</codeph>,
+          <ph conkeyref="ProductNames/nebula" class="- topic/ph "/> executes all of the steps in your workflow
+        simultaneously. <codeblock translate="no" class="+ topic/pre pr-d/codeblock ">dependsOn:
+- deploy_test_cluster</codeblock></li>
+    </ul>
+    <section class="- topic/section ">
+      <p class="- topic/p ">This example workflow deploys three steps. All three steps deploy Alpine containers. The
+        first step prints a "Hello world" message to the workflow's logs. The second and third steps
+        run <codeph translate="no" class="+ topic/ph pr-d/codeph ">ls</codeph> and <codeph translate="no" class="+ topic/ph pr-d/codeph ">ps</codeph>
+        commands.<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">version: v1
+description: Workflow to echo a nice hello world message to the logs
+
+steps:
+- name: echo
+  image: alpine:latest
+  input:
+  - echo "Hello world. I am $(whoami)"
+  - cat /nebula/spec.json
+  spec:
+    hello: world
+- name: ls
+  image: alpine:latest
+  command: ls
+  args:
+  - "-la"
+  - "/"
+  dependsOn:
+    - echo
+- name: ps
+  image: alpine:latest
+  command: ps
+  args:
+  - "-a"
+  dependsOn:
+    - echo</codeblock></p>
+      <p class="- topic/p ">
+        <note class="- topic/note ">The <codeph translate="no" class="+ topic/ph pr-d/codeph ">input</codeph> and <codeph translate="no" class="+ topic/ph pr-d/codeph ">command</codeph>
+          keys still function, but are deprecated. We're working on updating this page with a better
+          example. </note>
+      </p>
+      <p class="- topic/p ">Once you've created your workflow, add it to your Nebula account using the web interface or
+        the CLI.</p>
+    </section>
+ </conbody>
+</concept>

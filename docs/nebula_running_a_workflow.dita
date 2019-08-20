@@ -1,0 +1,14 @@
+<!DOCTYPE concept PUBLIC "-//PUPPET//DTD DITA Puppet Concept//EN" "concept.dtd">
+<concept id="nebuila_running_a_workflow" class="- topic/topic concept/concept ">
+ <title class="- topic/title ">Running a workflow</title>
+ <shortdesc class="- topic/shortdesc ">Run a workflow from <ph conkeyref="ProductNames/nebula" class="- topic/ph ">'s</ph>'s web interface, or use
+  the CLI.</shortdesc>
+ <prolog class="- topic/prolog ">
+  <author type="creator" translate="no" class="- topic/author ">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
+ </prolog>
+
+ <conbody class="- topic/body  concept/conbody ">
+  <p class="- topic/p ">To run a workflow, click on <uicontrol class="+ topic/ph ui-d/uicontrol ">Run Workflow</uicontrol>, or use the <codeph translate="no" class="+ topic/ph pr-d/codeph ">workflow run</codeph>
+   command:<codeblock translate="no" class="+ topic/pre pr-d/codeblock ">./nebula-cli/nebula-cli workflow run --name &lt;NAME_OF_WORKFLOW&gt;</codeblock></p>
+ </conbody>
+</concept>
