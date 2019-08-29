@@ -9,9 +9,6 @@
         topics (with the conkeyref property) instead of writing out the keywords. That way, we can
         update them easier and maintain consistency. To discuss any changes to these, contact
         kari@puppet.com or raise it as an issue with the Tech Pubs team.</shortdesc>
-    <prolog class="- topic/prolog ">
-        <author translate="no" type="creator" class="- topic/author ">kari halsted &lt;kari@puppet.com&gt;</author>
-    </prolog>
     <conbody class="- topic/body  concept/conbody ">
         <section translate="no" class="- topic/section "><title class="- topic/title ">Insert a keyword in your topic</title><p class="- topic/p ">
                 <ul class="- topic/ul ">

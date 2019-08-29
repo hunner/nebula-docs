@@ -3,9 +3,7 @@
  <title class="- topic/title ">Deploying to Google Kubernetes Engine using Helm</title>
  <shortdesc class="- topic/shortdesc ">Use the following step specification for a step that deploys an application to Google
   Kubernetes Engine using a Helm chart. </shortdesc>
- <prolog class="- topic/prolog ">
-  <author type="creator" translate="no" class="- topic/author ">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
- </prolog>
+ 
 
  <conbody class="- topic/body  concept/conbody ">
   <p class="- topic/p ">The <codeph translate="no" class="+ topic/ph pr-d/codeph ">spec</codeph> for a Helm deployment consists of six keys:<ul class="- topic/ul ">

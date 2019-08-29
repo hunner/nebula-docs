@@ -3,9 +3,7 @@
  <title class="- topic/title ">Writing a workflow</title>
  <shortdesc class="- topic/shortdesc ">Use a <ph conkeyref="ProductNames/nebula_long" class="- topic/ph "/> workflow to define the steps in your
     deployment. </shortdesc>
- <prolog class="- topic/prolog ">
-  <author type="creator" translate="no" class="- topic/author ">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
- </prolog>
+ 
 
  <conbody class="- topic/body  concept/conbody ">
   <p class="- topic/p "><ph conkeyref="ProductNames/nebula" class="- topic/ph "/> workflows use three top-level keys: <codeph translate="no" class="+ topic/ph pr-d/codeph ">version</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">description</codeph>, and <codeph translate="no" class="+ topic/ph pr-d/codeph ">steps</codeph>. </p>

@@ -3,9 +3,7 @@
  <title class="- topic/title ">Step specifications</title>
  <shortdesc class="- topic/shortdesc ">The specification (<codeph translate="no" class="+ topic/ph pr-d/codeph ">spec</codeph>) section of a workflow defines
   the task that the step is performing.</shortdesc>
- <prolog class="- topic/prolog ">
-  <author type="creator" translate="no" class="- topic/author ">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
- </prolog>
+ 
 
  <conbody class="- topic/body  concept/conbody ">
   <p class="- topic/p "/>

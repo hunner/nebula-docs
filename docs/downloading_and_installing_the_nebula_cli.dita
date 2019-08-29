@@ -2,10 +2,6 @@
 <task id="install_nebula_cli" class="- topic/topic task/task ">
     <title class="- topic/title ">Download and install the Nebula CLI</title>
     <shortdesc class="- topic/shortdesc ">Use the Nebula command line interface (CLI) to manage your workflows and secrets. </shortdesc>
-    <prolog class="- topic/prolog ">
-        <author type="creator" translate="no" class="- topic/author ">Heston Hoffman
-            &lt;heston.hoffman@puppet.com&gt;</author>
-    </prolog>
 
     <taskbody class="- topic/body task/taskbody ">
         <context class="- topic/section task/context ">

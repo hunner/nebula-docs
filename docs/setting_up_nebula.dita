@@ -4,9 +4,7 @@
  <title>Setting up <ph conkeyref="ProductNames/nebula_long"/></title>
  <shortdesc>To set up <ph conkeyref="ProductNames/nebula"/>, integrate a repository using <ph conkeyref="ProductNames/nebula">'s</ph>'s web interface, and install the command-line interface
   (CLI). </shortdesc>
- <prolog>
-  <author type="creator" translate="no">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
- </prolog>
+
 
  <conbody/>
 </concept>

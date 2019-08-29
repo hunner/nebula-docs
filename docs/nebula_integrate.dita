@@ -3,9 +3,7 @@
     <title class="- topic/title ">Integrate a repository with <ph conkeyref="ProductNames/nebula_long" class="- topic/ph "/></title>
     <shortdesc class="- topic/shortdesc ">You must integrate a repository with <ph conkeyref="ProductNames/nebula" class="- topic/ph "/> before you
         can add a workflow.</shortdesc>
-    <prolog class="- topic/prolog ">
-        <author type="creator" translate="no" class="- topic/author ">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
-    </prolog>
+    
     
     <taskbody class="- topic/body task/taskbody ">
         <context class="- topic/section task/context ">

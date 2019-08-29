@@ -4,9 +4,7 @@
  <title>Understanding workflows</title>
  <shortdesc><ph conkeyref="ProductNames/nebula_long"/> uses YAML workflows to define the steps in an
   application deployment.</shortdesc>
- <prolog>
-  <author type="creator" translate="no">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
- </prolog>
+ 
 
  <conbody>
   <p>Each step in a <ph conkeyref="ProductNames/nebula"/> workflow performs a distinct action and

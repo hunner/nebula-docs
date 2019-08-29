@@ -4,9 +4,7 @@
   <title>Welcome to <ph conkeyref="ProductNames/nebula_long"/></title>
   <shortdesc><ph conkeyref="ProductNames/nebula_long"/> helps you continuously deploy your cloud
     native applications and infrastructure using simple workflows. </shortdesc>
-  <prolog>
-    <author translate="no" type="creator">Heston Hoffman &lt;heston.hoffman@puppet.com&gt;</author>
-  </prolog>
+  
   <conbody>
     <image href="nebula-hero.png" width="400"/>
     <table>
