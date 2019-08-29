@@ -1,7 +1,3 @@
----
-author: Heston Hoffman <heston.hoffman@puppet.com\>
----
-
 # Running a workflow
 
 Run a workflow from Nebula's web interface, or use the CLI.

@@ -1,7 +1,3 @@
----
-author: Heston Hoffman <heston.hoffman@puppet.com\>
----
-
 # Welcome to Project Nebula
 
 Project Nebula helps you continuously deploy your cloud native applications and infrastructure using simple workflows.

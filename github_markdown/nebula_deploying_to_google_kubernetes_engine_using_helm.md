@@ -1,7 +1,3 @@
----
-author: Heston Hoffman <heston.hoffman@puppet.com\>
----
-
 # Deploying to Google Kubernetes Engine using Helm
 
 Use the following step specification for a step that deploys an application to Google Kubernetes Engine using a Helm chart.

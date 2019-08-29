@@ -1,7 +1,3 @@
----
-author: Heston Hoffman <heston.hoffman@puppet.com\>
----
-
 # Step specifications
 
 The specification \(`spec`\) section of a workflow defines the task that the step is performing.

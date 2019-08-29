@@ -1,7 +1,3 @@
----
-author: Heston Hoffman <heston.hoffman@puppet.com\>
----
-
 # Setting up Project Nebula
 
 To set up Nebula, integrate a repository using Nebula's web interface, and install the command-line interface \(CLI\).

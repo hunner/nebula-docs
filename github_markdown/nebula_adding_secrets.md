@@ -1,7 +1,3 @@
----
-author: Heston Hoffman <heston.hoffman@puppet.com\>
----
-
 # Adding secrets
 
 Add a secret to your workflow and then use Nebula's web interface, or the CLI to set a value for the secret.

@@ -1,7 +1,3 @@
----
-author: Heston Hoffman <heston.hoffman@puppet.com\>
----
-
 # Writing a workflow
 
 Use a Project Nebula workflow to define the steps in your deployment.
