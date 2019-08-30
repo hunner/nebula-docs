@@ -1,6 +1,6 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="nebula_create_workflow" class="- topic/topic concept/concept ">
- <title class="- topic/title ">Writing a workflow</title>
+ <title class="- topic/title " id="writing_workflow">Writing a workflow</title>
  <shortdesc class="- topic/shortdesc ">Use a <ph conkeyref="ProductNames/nebula_long" class="- topic/ph "/> workflow to define the steps in your
     deployment. </shortdesc>
  

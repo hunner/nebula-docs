@@ -1,7 +1,3 @@
----
-author: Heston Hoffman <heston.hoffman@puppet.com\>
----
-
 # Using workflows
 
 Project Nebula uses YAML workflows to define the steps in an application deployment.
