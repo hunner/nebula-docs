@@ -26,3 +26,6 @@ steps:
       name: my-git-repo
       repository: path/to/your/repo
 ```
+
+See a problem with this doc? Submit a pull request to the Nebula docs repo or
+open an issue.
