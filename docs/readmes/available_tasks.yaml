@@ -1,0 +1,10 @@
+---
+readmes:
+  -
+    name: hello-world 
+    dockerhub-repo-prefix: hestonhoffman
+    dockerhub-repo-name: hello-world 
+  -
+    name: gohello 
+    dockerhub-repo-prefix: hestonhoffman
+    dockerhub-repo-name: gohello
