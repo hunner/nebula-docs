@@ -4,7 +4,9 @@ readmes:
     name: hello-world 
     dockerhub-repo-prefix: hestonhoffman
     dockerhub-repo-name: hello-world 
+    md_filename: test.md
   -
     name: gohello 
     dockerhub-repo-prefix: hestonhoffman
     dockerhub-repo-name: gohello
+    md_filename: test.md

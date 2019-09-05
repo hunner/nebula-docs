@@ -1,16 +1,18 @@
 require 'yaml'
 
 def list_readmes(filename)
-    data = YAML.load(File.read(filename))
-    data["readmes"]
+     data = YAML.load(File.read(filename))
+     # data["readmes"]
 end
 
-readmes = list_readmes("available_tasks.yaml")
+filename = "available_tasks.yaml"
 
-puts readmes
+readmes = list_readmes(filename)
+# puts readmes
 
-# Vreadmes.each do |name, prefix, repo, md_filename |
-#    puts "#{name}, #{prefix}, #{repo}, #{md_filename}"
+readmes.each do |one, two|
+    puts "#{one} #{two}"
+#    puts "#{readmes[:name]}, #{readmes[:prefix]}, #{readmes[:repo]}, #{readmes[:md_filename]}"
 #    `docker run --rm \
 #    -v /$HOME/repos/nebula-docs/docs/readmes/#{:md_filename}:/data/README.md \
 #    -e DOCKERHUB_USERNAME=${DOCKERHUB_USERNAME} \
@@ -18,4 +20,4 @@ puts readmes
 #    -e DOCKERHUB_REPO_PREFIX=#{:prefix} \
 #    -e DOCKERHUB_REPO_NAME=#{:repo} \
 #     readme-to-hub`
-#end
+end
