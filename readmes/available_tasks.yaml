@@ -1,12 +1,10 @@
----
-readmes:
   -
     name: hello-world 
-    dockerhub-repo-prefix: hestonhoffman
-    dockerhub-repo-name: hello-world 
+    dockerhub_repo_prefix: hestonhoffman
+    dockerhub_repo_name: hello-world 
     md_filename: test.md
   -
     name: gohello 
-    dockerhub-repo-prefix: hestonhoffman
-    dockerhub-repo-name: gohello
+    dockerhub_repo_prefix: hestonhoffman
+    dockerhub_repo_name: gohello
     md_filename: test.md
