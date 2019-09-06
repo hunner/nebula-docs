@@ -1,6 +1,6 @@
 # projectnebula/msteams-notification
 
-This task step sends a markdown-formatted message to Microsoft Teams via an
+The Microsoft Teams notification task sends a markdown-formatted message to Microsoft Teams via an
 [Actionable Message](https://docs.microsoft.com/en-us/outlook/actionable-messages/)
 incoming webhook connector.
 
