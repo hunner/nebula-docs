@@ -5,10 +5,11 @@ The Helm deployer task deploys a Helm chart to a Kubernetes cluster.
 | Parameter | Child parameters | Data type | Description | Default | Required |
 |-----------|------------------|-----------|-------------|---------|----------|
 | `credentials` || mapping | A map of cert credentials to use for accessing the tiller controller in the cluster | None | True |
-|| `ca` | string | The Tiller CA file contents | None | True |
-|| `key` | string | The Tiller key file contents | None | True |
-|| `cert` | string | The Tiller cert file contents | None | True |
-| `values` || mapping | Use the `values` key to override specific values in the chart. For example, the example below overrides some of the chart's API values. | None | True |
+|| `ca.pem` | string | The Tiller CA file contents | None | True |
+|| `key.pem` | string | The Tiller key file contents | None | True |
+|| `cert.pem` | string | The Tiller cert file contents | None | True |
+| `name` || string | The name of the deployment.| None| True|
+| `values` || mapping | Use the `values` mapping to override specific values in the chart. For example, the example below overrides some of the chart's API values. | None | True |
 | `chart` || string | The repo/chart to use. If the `git` map is set, then the chart is referenced from that repository instead of a remote chart repo. | None | True |
 | `namespace` || string | The Kubernetes namespace to deploy the chart into. | None | True |
 | `recreatePods` || boolean | If `true`, all pods managed by this chart will be destroyed and recreated after the deployment completes. | `false` | False |
@@ -33,13 +34,13 @@ steps:
   image: projectnebula/helm-deployer:latest
   spec:
     credentials:
-      ca:
+      ca.pem:
         $type: Secret
         name: ca
-      key:
+      key.pem:
         $type: Secret
         name: key
-      cert:
+      cert.pem:
         $type: Secret
         name: cert
     values:
