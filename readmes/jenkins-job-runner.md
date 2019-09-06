@@ -1,6 +1,6 @@
 # projectnebula/jenkins-job-runner
 
-The jenkins-job-runner task runs a parameterized build on a Jenkins instance.
+The Jenkins job runner task runs a parameterized build on a Jenkins instance.
 
 | Parameter | Child parameters | Data type | Description | Default | Required |
 |-----------|------------------|-----------|-------------|---------|----------|
@@ -43,6 +43,3 @@ steps:
       timeoutSeconds: 5000
       cancelOnTimeout: false
 ```
-
-See a problem with this doc? Submit a pull request to the Nebula docs repo or
-open an issue.

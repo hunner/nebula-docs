@@ -1,6 +1,6 @@
 # projectnebula/slack-notification
 
-This task sends a message to a Slack channel.
+The Slack notification task sends a message to a Slack channel.
 
 Use the following specifications:
 
@@ -28,6 +28,3 @@ steps:
     message: "You got notified with Nebula! Good job everyone."
     username: me
 ```
-
-See a problem with this doc? Submit a pull request to the Nebula docs repo or
-open an issue.

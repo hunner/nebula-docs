@@ -1,6 +1,6 @@
 # projectnebula/terraform
 
-This task step runs Terraform `apply`.
+The Terraform task runs Terraform `apply`.
 
 Use the following specifications:
 
@@ -45,6 +45,3 @@ steps:
       name: my-git-repo
       repository: path/to/your/repo
 ```
-
-See a problem with this doc? Submit a pull request to the Nebula docs repo or
-open an issue.

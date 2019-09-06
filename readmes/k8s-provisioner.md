@@ -48,6 +48,3 @@ steps:
     - "us-west-2a"
     region: us-west2
 ```
-
-See a problem with this doc? Submit a pull request to the Nebula docs repo or
-open an issue.

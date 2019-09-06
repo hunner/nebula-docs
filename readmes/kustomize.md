@@ -1,6 +1,6 @@
 # projectnebula/kustomize
 
-A step that applies Kubernetes kustomizations.
+The Kustomize task applies Kubernetes kustomizations.
 
 | Parameter | Child parameters | Data type | Description | Default | Required |
 |-----------|------------------|-----------|-------------|---------|----------|
@@ -51,6 +51,3 @@ steps:
       name: my-git-repo
       repository: path/to/your/repo
 ```
-
-See a problem with this doc? Submit a pull request to the Nebula docs repo or
-open an issue.
