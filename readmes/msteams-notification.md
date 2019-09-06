@@ -26,6 +26,3 @@ steps:
     message: "You got notified with Nebula! Good job everyone."
     webhookURL: https://example.com
 ```
-
-See a problem with this doc? Submit a pull request to the Nebula docs repo or
-open an issue.

@@ -17,6 +17,9 @@ The AWS CloudFormation deployer task creates or updates a CloudFormation stack u
 || `name` | string | A directory name for the git clone. | None | True |
 || `repository` | string | The git repository URL. | None | True |
 | `parameters` || mapping | A key-value mapping of parameters to pass to the template. | None | False |
+| `s3` || mapping | An S3 bucket mapping for your s3 bucket and template | None | For large templates |
+|| `bucket` | string | An S3 bucket to upload the template to. Required for templates larger than 51,200 bytes. | None | For large templates |
+|| `prefix` | string | A folder name to prefix the artifacts' file names with when it uploads them to the S3 bucket. | None | False |
 | `capabilities` || sequence of strings | A list of capabilities to use for the deployment, such as `CAPABILITY_NAMED_IAM`. | None | False |
 | `tags` || mapping | A key-value mapping of tags to add to the deployment. | None | False |
 
@@ -52,11 +55,11 @@ steps:
       parameters: 
         Environment: production
         CertificateARN: arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012
+      s3:
+        bucket: my-bucket
+        prefix: app   
       capabilities:
         - CAPABILITY_NAMED_IAM
       tags:
         lifetime: 4d
 ```
-
-See a problem with this doc? Submit a pull request to the Nebula docs repo or
-open an issue.
